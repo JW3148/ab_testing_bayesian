@@ -1,0 +1,22 @@
+Steps to perform ab testing
+- Confirm the metric, the matric has to be a quantitative measure
+- Finalize the feature to test
+- Design the test, significance, power, minimum desired effect
+- Calculate the min size/traffic
+- When to end the test
+- Make decisions. e.g if the change required some comple engineering which brings risk
+
+
+What is bayesian testing
+- In contract to traditional approach, it assumes the metric(e.g. conversion rate) is random variable
+  that has certain distribution
+- By calculating the posterior distribution of control and test group, we can answer questions like
+  'what is the prob of CTR in the test group is larger than the control group?'
+- conjugate prior of bonulli dist
+- when to exit the test - when expected loss for a variant is smaller than certain threshhould
+
+  
+Advantage of bayesian testing
+- Traditional t test sometimes ignores the power/sesitivty of the test. For tranditional test, usually 
+  need to large sample size to achive satisfactory power, especially you expect the affect is small
+- Bayesian is more willing to accpet variants that provide small improvement
